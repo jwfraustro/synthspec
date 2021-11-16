@@ -1,0 +1,51 @@
+# Optional Keywords, Input
+# Leave options blank to use defaults
+nx:             # Size in spacial direction (512)
+ny:             # Size in spectral direction (nx)
+bklevel:        # Background level (200 ADUs)
+epadu:          # Gain of CCD array (10 electrons / ADU)
+rdnoise:        # Read noise of array (10 electrons)
+numemil:        # Number of emission lines in object spectrum (10)
+numabsl:        # Number of absorption lines in spectrum (NUMEMIL * 2/3)
+speclevel:      # Level of spectrum (10000 ADUs)
+objpos:         # Position of object on array (nx / 2)
+seeing:         # Amount of seeing in sky (10)
+specres:        # Spectral resolution of array (2)
+numbad:         # Number of bad pixels (100)
+numrays:        # Number of cosmic rays (NUMBAD)
+maxbadval:      # Maximum bad pixel value (15000 ADU)
+maxrayval:      # Maximum ray pixel value (MAXBADVAL * 1/2)
+skyllvl:        # Maximum sky line level (BKLEVEL * 4)
+emillvl:        # Maximum emission line level (SPECLEVEL * 6)
+temp:           # Temperature of object (5000K)
+swavel:         # Start wavelength of array (1.5e-6m)
+ewavel:         # End wavelength of array (SWAVEL + 0.1e-6)
+tiltangle:      # The tilt angle of all spectrum lines (1 Degree)
+traceosc:       # Number of full oscillations in spectral curve (0.5)
+traceamp:       # Amplitude of spectral curve (6 pixels)
+smile:          # Amplitude of smile in sky lines (7 pixels)
+biasframe:      # Bias frame (2D array, NX x NY, default 0)
+flatframe:      # Flat field frame (2D array, NX x NY, default 1)
+
+# Optional Keywords, Set
+nonoise: False    # Set to not add noise
+nobad: False      # Set to not add bad pixels
+norays: False     # Set to not add cosmic rays
+nobbcurve: False  # Set to not add a black body curve to the spectrum
+noskyl: False     # Set to not add sky lines
+nospecl: False    # Set to not add lines to object spectrum
+randskyl: False   # Set to add random skylines
+notilt: False     # Set to not rotate frame
+notrace: False    # Set to not curve the trace
+nosmile: False    # Set to not curve lines of constant wavelength
+
+# Optional Keywords, Output:
+objheader: True      # The header for the spec frame
+skyheader: True      # The header for the sky frame
+objcrmask: True      # The bad pixel mask used for the object frame
+skycrmask: True      # The bad pixel mask used for the sky frame
+proframe: True       # Profile image
+bgframe: True        # Background image
+specframe: True      # Object spectrum frame without noise, sky, or bad pixels
+spectrum: True       # Spectrum used to generate specframe
+traceout: True       # 1D array of the pixel location for the profile center
