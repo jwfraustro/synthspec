@@ -4,17 +4,11 @@ import sys, math
 import numpy as np
 
 """
-Name:
+Name: synthspec.py
 
-Purpose:
-
-Category:
+Purpose: Creation of arbitrary synthetic spectrographic data frames for testing spectral extraction programs.
 
 Calling Example:
-
-Inputs:
-
-Outputs:
 
 History:
 
@@ -23,7 +17,9 @@ Created on 11/14/2021$
 
 
 def synthspec(**config):
-	# Check for blank config and set defaults
+
+	# Check for blank configuration options and set defaults.
+
 	nx = config.get('nx', 512)
 	ny = config.get('ny', config['nx'])
 	bklevel = config.get('bklevel', 200)
