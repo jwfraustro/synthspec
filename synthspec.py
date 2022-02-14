@@ -1,5 +1,7 @@
 from lib.config_utils import load_config
 from lib.initheader import initheader
+from lib.badpixloc import badpixloc
+from lib.badpixval import badpixval
 import sys, math
 import numpy as np
 
